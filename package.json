@@ -14,7 +14,7 @@
   "name": "todolistjs",
   "description": "To Do List Personal Project",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TRT-ArchieSD/ToDoList.git"

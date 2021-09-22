@@ -1,7 +1,10 @@
-var express = require('express');
-var todoController = require('./controllers/todoController');
+const express = require('express');
+const todoController = require('./controllers/todoController');
 
-var app = express();
+const app = express();
+
+const PORT = 8080;
+const HOST = '0.0.0.0';
 
 //template engine
 app.set('view engine', 'ejs');
@@ -11,8 +14,8 @@ app.use(express.static('./public'))
 
 //fire controllers
 todoController(app);
+// app.use('/blah', todoController); //this one does not work
 
 //listen to port
-var port = 3000;
-app.listen(port);
-console.log(`You are listening to port ${port}`);
+app.listen(PORT, HOST);
+console.log(`Running on https://${HOST}:${PORT}/todo inside the container`);

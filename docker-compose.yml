@@ -1,0 +1,14 @@
+services:
+  myapp:
+    build: .
+    ports:
+      - 8080:8080
+  mongodb:
+    image: mongo:5.0
+    hostname: todo
+    container_name: mongodb
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=todoUser
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    ports: 
+      - 27017:27017

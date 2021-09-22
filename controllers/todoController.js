@@ -1,11 +1,9 @@
 var express = require('express');
-var app = express(); 
 var mongoose = require('mongoose');
 
-//connect to the database
-mongoose.connect('mongodb://user:password@127.0.0.1:27017/todo')
+// connecting to database
+mongoose.connect("mongodb://todoUser:password@mongodb:27017");
 
-//create schema
 var todoSchema = new mongoose.Schema({
     item: String
 });
